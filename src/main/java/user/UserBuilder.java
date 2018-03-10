@@ -1,8 +1,5 @@
 package user;
 
-/**
- * Created by Alexander Silaev on 07.03.2018.
- */
 public class UserBuilder {
 
     private String name;
