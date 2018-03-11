@@ -10,13 +10,13 @@ import java.util.stream.Collectors;
 public class BlackListName {
 
     public static List<String> getBlackList(String filePath) {
-        List<String> list;
-        try (BufferedReader br = Files.newBufferedReader(Paths.get(filePath))) {
-            list = br.lines().collect(Collectors.toList());
 
+        try (BufferedReader br = Files.newBufferedReader(Paths.get(filePath))) {
+            List<String> list;
+            list = br.lines().collect(Collectors.toList());
+            return list;
         } catch (IOException ex) {
             throw new RuntimeException(ex);
         }
-        return list;
     }
 }
